@@ -25,9 +25,9 @@ import checkWithinViewport from '../support/check/checkWithinViewport';
 import compareText from '../support/check/compareText';
 import isEnabled from '../support/check/isEnabled';
 import isExisting from '../support/check/isExisting';
-import isVisible from '../support/check/isVisible';
+import isVisible from '../support/check/isDisplayed';
 import waitFor from '../support/action/waitFor';
-import waitForVisible from '../support/action/waitForVisible';
+import waitForVisible from '../support/action/waitForDisplayed';
 import checkIfElementExists from '../support/lib/checkIfElementExists';
 
 const { Then } = require('cucumber');
@@ -49,12 +49,12 @@ Then(
 );
 
 Then(
-    /^I expect that element "([^"]*)?" is( not)* visible$/,
+    /^I expect that element "([^"]*)?" is( not)* displayed$/,
     isVisible
 );
 
 Then(
-    /^I expect that element "([^"]*)?" becomes( not)* visible$/,
+    /^I expect that element "([^"]*)?" becomes( not)* displayed$/,
     waitForVisible
 );
 
@@ -174,7 +174,7 @@ Then(
 );
 
 Then(
-    /^I wait on element "([^"]*)?"(?: for (\d+)ms)*(?: to( not)* (be checked|be enabled|be selected|be visible|contain a text|contain a value|exist))*$/,
+    /^I wait on element "([^"]*)?"(?: for (\d+)ms)*(?: to( not)* (be checked|be enabled|be selected|be displayed|contain a text|contain a value|exist))*$/,
     {
         wrapperOptions: {
             retry: 3,

@@ -34,7 +34,7 @@ exports.config = {
     // spawned. The property handles how many capabilities from the same test
     // should run tests.
     //
-    maxInstances: 5,
+    maxInstances: 1,
     //
     // If you have trouble getting all important capabilities together, check
     // out the Sauce Labs platform configurator - a great tool to configure your
@@ -69,8 +69,8 @@ exports.config = {
     // Saves a screenshot to a given path if a command fails.
     screenshotPath: './errorShots/',
     //
-    // Set a base URL in order to shorten url command calls. If your url
-    // parameter starts with "/", then the base url gets prepended.
+    // Set a base URL in order to shorten getUrl command calls. If your getUrl
+    // parameter starts with "/", then the base getUrl gets prepended.
     baseUrl: 'http://localhost:8080',
     //
     // Default timeout for all waitFor* commands.
@@ -127,7 +127,7 @@ exports.config = {
         backtrace: false,
         // <string[]> filetype:compiler used for processing required features
         compiler: [
-            'js:babel-register',
+            'js:@babel/register',
         ],
         // <boolean< Treat ambiguous definitions as errors
         failAmbiguousDefinitions: true,

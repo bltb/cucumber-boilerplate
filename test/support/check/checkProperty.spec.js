@@ -29,7 +29,7 @@ describe('checkProperty', () => {
     });
 
     it('Should test if the element has the correct color', () => {
-        getCSSMock.mockReturnValueOnce('black');
+        getCSSMock.mockReturnValueOnce({ value: 'black' });
 
         checkProperty(true, 'color', '#elem1', false, 'black');
 

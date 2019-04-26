@@ -25,8 +25,15 @@ module.exports = (isCSS, attrName, selector, falseCase, expectedValue) => {
      * The actual attribute value
      * @type {Mixed}
      */
-    const attributeValue = $(selector)[command](attrName);
+    let attributeValue = $(selector)[command](attrName);
 
+    /**
+     * when getting something with a color or font-weight WebdriverIO returns a
+     * object but we want to assert against a string
+     */
+    if (attrName.match(/(color|font-weight)/)) {
+        attributeValue = attributeValue.value;
+    }
     if (falseCase) {
         expect(attributeValue).to.not
             .equal(expectedValue,

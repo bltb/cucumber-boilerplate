@@ -114,14 +114,14 @@ Feature: Sample Snippets test
         Then  I expect that element "//html/body/section/form/input[1]" contains the text "a"
         And   I expect that element "//html/body/section/form/input[1]" not contains the text "aa"
 
-    Scenario: check attribut
+    Scenario: check attribute
         Given I open the url "http://webdriverjs.christian-bromann.com/"
         And   the attribute "data-foundby" from element "#newWindow" is "partial link text"
         And   the attribute "data-foundby" from element "#newWindow" is not "something else"
         Then  I expect that the attribute "data-foundby" from element "#newWindow" is "partial link text"
         And   I expect that the attribute "data-foundby" from element "#newWindow" is not "something else"
 
-    Scenario: check css attribut
+    Scenario: check css attribute
         Given I open the url "http://webdriverjs.christian-bromann.com/"
         And   the css attribute "background-color" from element ".red" is "rgba(255,0,0,1)"
         And   the css attribute "background-color" from element ".red" is not "rgba(0,255,0,1)"

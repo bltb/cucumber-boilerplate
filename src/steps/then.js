@@ -149,7 +149,7 @@ Then(
 );
 
 Then(
-    /^I expect that element "([^"]*)?" is( not)* positioned at ([\d]+)px on the (x|y) axis$/,
+    /^I expect that element "([^"]*)?" is( not)* positioned at ([\d+\.?\d*]+)px on the (x|y) axis$/,
     checkOffset
 );
 

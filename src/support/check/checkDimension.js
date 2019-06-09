@@ -40,15 +40,15 @@ module.exports = (elem, falseCase, expectedSize, dimension) => {
         expect(originalSize).to.not
             .equal(
                 intExpectedSize,
-                `Element "${elem}" should not have a ${label} of ` +
-                `${intExpectedSize}px`
+                `Element "${elem}" should not have a ${label} of `
+                    + `${intExpectedSize}px`
             );
     } else {
         expect(originalSize).to
             .equal(
                 intExpectedSize,
-                `Element "${elem}" should have a ${label} of ` +
-                `${intExpectedSize}px, but is ${originalSize}px`
+                `Element "${elem}" should have a ${label} of `
+                    + `${intExpectedSize}px, but is ${originalSize}px`
             );
     }
 };
